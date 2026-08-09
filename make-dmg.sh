@@ -3,7 +3,7 @@ set -euo pipefail
 cd "$(dirname "$0")"
 
 APP_NAME="ClockOverlay"
-VERSION="1.0"
+VERSION="$(defaults read "$(pwd)/Support/Info.plist" CFBundleShortVersionString)"
 VOL_NAME="Clock Overlay"
 DMG_FINAL="dist/${APP_NAME}-${VERSION}.dmg"
 DMG_RW="/tmp/${APP_NAME}-${VERSION}.rw.dmg"
